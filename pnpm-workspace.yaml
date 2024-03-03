@@ -1,0 +1,10 @@
+savePrefix: ""
+minimumReleaseAge: 1440 # 1 day in minutes
+allowBuilds:
+  msw: true
+
+# Verified false positives: valid signature + unchanged maintainer + no audit
+# advisory on the registry for both. Re-check if either package is bumped.
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - semver@6.3.1
